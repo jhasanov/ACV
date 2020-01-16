@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="691802f3-b976-4891-99e0-0a7ba2939367" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cielab/detect_close.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cielab/detect_close.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cielab/detect_close.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cielab/rect_area.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+            <state relative-caret-position="1275">
+              <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -28,17 +28,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cielab/rgb_cielab_rgb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cielab/detect_close.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cielab/interface_trial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Cielab/detect_close.py">
+        <entry file="file://$PROJECT_DIR$/Cielab/interface_trial1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state relative-caret-position="85">
+              <caret line="56" column="66" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cielab/detect_close_slow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1156">
+              <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -51,6 +87,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1887">
               <caret line="111" column="28" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/numpy/core/_internal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -68,6 +113,8 @@
     <findStrings>
       <find>spline</find>
       <find>cubic</find>
+      <find>size</find>
+      <find>copy</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,7 +126,14 @@
         <option value="$PROJECT_DIR$/Cielab/fft.py" />
         <option value="$PROJECT_DIR$/Cielab/rgb_cielab_rgb.py" />
         <option value="$PROJECT_DIR$/Cielab/rect_area.py" />
+        <option value="$PROJECT_DIR$/Cielab/signal.py" />
+        <option value="$PROJECT_DIR$/Cielab/file.csv" />
+        <option value="$PROJECT_DIR$/Cielab/rorrowful_life.py" />
+        <option value="$PROJECT_DIR$/Cielab/sad_life.py" />
+        <option value="$PROJECT_DIR$/Cielab/detect_close_slow.py" />
+        <option value="$PROJECT_DIR$/Cielab/interface_trial.py" />
         <option value="$PROJECT_DIR$/Cielab/detect_close.py" />
+        <option value="$PROJECT_DIR$/Cielab/interface_trial1.py" />
       </list>
     </option>
   </component>
@@ -94,6 +148,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,13 +165,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Cielab/detect_close.py" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Cielab/sad_life.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\karib\Repositories\jhasanov\ACV\Cielab" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -130,17 +190,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="detect_close" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.interface_trial1">
+    <configuration name="detect_close" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ACV" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\karib\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cielab" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cielab/detect_close.py" />
@@ -152,6 +212,98 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="detect_close_slow" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ACV" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cielab" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cielab/detect_close_slow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="interface_trial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ACV" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cielab" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cielab/interface_trial.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="interface_trial1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ACV" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cielab" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cielab/interface_trial1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sad_life" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="ACV" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\karib\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cielab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cielab/sad_life.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.interface_trial1" />
+        <item itemvalue="Python.interface_trial" />
+        <item itemvalue="Python.detect_close" />
+        <item itemvalue="Python.detect_close_slow" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -168,19 +320,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -248,10 +401,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Cielab/ecg_data.csv" />
+    <entry file="file://$PROJECT_DIR$/Cielab/signal.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ADA/Signal/ecg_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="3" lean-forward="true" selection-end-line="500" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cielab/rorrowful_life.py" />
+    <entry file="file://$PROJECT_DIR$/Cielab/file.csv" />
+    <entry file="file://$PROJECT_DIR$/Cielab/sad_life.py" />
     <entry file="file://$PROJECT_DIR$/Cielab/rect_area.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+        <state relative-caret-position="1275">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -260,8 +428,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cielab/rgb_cielab_rgb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cielab/detect_close_slow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -272,12 +450,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/numpy/core/_internal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Cielab/detect_close.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="27" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cielab/interface_trial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cielab/interface_trial1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="56" column="66" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
