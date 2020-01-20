@@ -9,6 +9,7 @@ from tkinter import filedialog
 from colormath.color_diff_matrix import delta_e_cie2000
 sys.setrecursionlimit(2000)
 
+
 class Application(tk.Frame):
     def __init__(self, master=None):
         super().__init__(master)
@@ -16,7 +17,7 @@ class Application(tk.Frame):
         self.pack()
         self.create_widgets()
         self.width, self.height = pyautogui.size()
-        self.thresh = 20
+        self.thresh = 50
         self.scale = 0.3
         self.size = int(self.width*self.scale), int(self.height*self.scale)
         self.panel_original = None
@@ -29,6 +30,10 @@ class Application(tk.Frame):
     def create_widgets(self):
         self.select_image = tk.Button(self, text="Select an image", command=self.select_image)
         self.select_image.pack(side="top", fill="both", expand="yes", padx="10", pady="10")
+        self.thresh_L = tk.Label(self, text='Threshold')
+        self.thresh_L.pack(side='left')
+        self.entry = tk.Entry(self)
+        self.entry.pack(side='left')
         self.quit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
         self.quit.pack(side="bottom")
@@ -75,10 +80,11 @@ class Application(tk.Frame):
         self.x0 = event.y
         self.y0 = event.x
         print(self.x0, self.y0)
+        if len(self.entry.get()) > 1:
+            self.thresh = float(self.entry.get())
         self.paint_closes(self.x0, self.y0)
 
     def is_close(self, x1, y1):
-
         color_vec = np.array(self.lab_image[self.x0, self.y0, :])
         color_mat = np.array([(self.lab_image[x1, y1, 0], self.lab_image[x1, y1, 1], self.lab_image[x1, y1, 2])])
         dist = np.asscalar(delta_e_cie2000(color_vec, color_mat)[0])
@@ -107,30 +113,34 @@ class Application(tk.Frame):
             return 0
         else:
             self.binary_map[x, y] = 1
+            self.coord_list.append((x+1, y))
+            self.coord_list.append((x-1, y))
+            self.coord_list.append((x, y+1))
+            self.coord_list.append((x, y-1))
             # copy[x, y] = 255
             # print(copy[x, y])
             # try:
-            if dir==4:
-                self.explore(x+1, y, dir=0)
-                self.explore(x, y+1, dir=1)
-                self.explore(x, y-1, dir=2)
-                self.explore(x-1, y, dir=3)
-            if dir==0:
-                self.explore(x+1, y, dir=0)
-                self.explore(x, y+1, dir=1)
-                self.explore(x, y-1, dir=2)
-            if dir==1:
-                self.explore(x, y+1, dir=1)
-                self.explore(x+1, y, dir=0)
-                self.explore(x-1, y, dir=3)
-            if dir==2:
-                self.explore(x, y-1, dir=2)
-                self.explore(x-1, y, dir=3)
-                self.explore(x+1, y, dir=0)
-            if dir==3:
-                self.explore(x-1, y, dir=3)
-                self.explore(x, y+1, dir=1)
-                self.explore(x, y-1, dir=2)
+            # if dir==4:
+            #     self.explore(x+1, y, dir=0)
+            #     self.explore(x, y+1, dir=1)
+            #     self.explore(x, y-1, dir=2)
+            #     self.explore(x-1, y, dir=3)
+            # if dir==0:
+            #     self.explore(x+1, y, dir=0)
+            #     self.explore(x, y+1, dir=1)
+            #     self.explore(x, y-1, dir=2)
+            # if dir==1:
+            #     self.explore(x, y+1, dir=1)
+            #     self.explore(x+1, y, dir=0)
+            #     self.explore(x-1, y, dir=3)
+            # if dir==2:
+            #     self.explore(x, y-1, dir=2)
+            #     self.explore(x-1, y, dir=3)
+            #     self.explore(x+1, y, dir=0)
+            # if dir==3:
+            #     self.explore(x-1, y, dir=3)
+            #     self.explore(x, y+1, dir=1)
+            #     self.explore(x, y-1, dir=2)
             # except:
             #     None
 
@@ -140,7 +150,11 @@ class Application(tk.Frame):
     def paint_closes(self, x, y):
         # global binary_map, image
         self.binary_map = np.full(self.lab_image.shape[:-1], -1)
-        self.explore(x, y)
+        self.coord_list = [(x, y)]
+        while self.coord_list:
+            x0, y0 = self.coord_list.pop(-1)
+            self.explore(x0, y0)
+        # self.explore(x, y)
         # binary_map[binary_map == 0] = 127
         self.binary_map[self.binary_map < 0] = 0
         self.binary_map[self.binary_map == 1] = 255
@@ -151,6 +165,7 @@ class Application(tk.Frame):
         # print(map)
         self.lab_final = cv2.bitwise_and(self.lab_image, self.lab_image, mask=map)
         self.__update_image_panels()
+        print(self.thresh)
 
     def fill_aux_panel(self):
         empty_image = np.zeros((self.aux_side, self.aux_side, 3), np.uint8)
