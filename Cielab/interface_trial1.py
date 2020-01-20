@@ -17,7 +17,7 @@ class Application(tk.Frame):
         self.pack()
         self.create_widgets()
         self.width, self.height = pyautogui.size()
-        self.thresh = 50
+        self.thresh = 20
         self.scale = 0.3
         self.size = int(self.width*self.scale), int(self.height*self.scale)
         self.panel_original = None
