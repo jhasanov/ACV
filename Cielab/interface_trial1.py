@@ -5,6 +5,8 @@ import numpy as np
 from PIL import Image
 from PIL import ImageTk
 import tkinter as tk
+import Cielab.adds as adds
+import colour
 from tkinter import filedialog
 from colormath.color_diff_matrix import delta_e_cie2000
 sys.setrecursionlimit(2000)
@@ -46,13 +48,17 @@ class Application(tk.Frame):
         self.image_path = filedialog.askopenfilename(title='Select an Image')
         self.original_cv2 = image = cv2.imread(self.image_path)
         img_scaled = cv2.resize(image, self.size, interpolation=cv2.INTER_AREA)
-        self.lab_image = cv2.cvtColor(img_scaled, cv2.COLOR_BGR2LAB)
+        # self.lab_image = cv2.cvtColor(img_scaled, cv2.COLOR_BGR2LAB)
+        self.lab_image = adds.BGR2LAB(img_scaled)
 
     def __update_image_panels(self):
         if self.lab_final is None:
             self.lab_final = self.lab_image
-        image1_RGB = cv2.cvtColor(self.lab_image, cv2.COLOR_LAB2RGB)
-        image2_RGB = cv2.cvtColor(self.lab_final, cv2.COLOR_LAB2RGB)
+        # image1_RGB = cv2.cvtColor(self.lab_image.astype(np.float32), cv2.COLOR_LAB2RGB)
+        image1_RGB = adds.LAB2RGB(self.lab_image)
+        # image2_RGB = cv2.cvtColor(self.lab_final.astype(np.float32), cv2.COLOR_LAB2RGB)
+        image2_RGB = adds.LAB2RGB(self.lab_final)
+        # print(image1_RGB, image1_RGB.shape)
         image1_P = Image.fromarray(image1_RGB)
         image2_P = Image.fromarray(image2_RGB)
         self.tk_original_image = ImageTk.PhotoImage(image1_P)
@@ -79,7 +85,7 @@ class Application(tk.Frame):
     def mouse_click(self, event):
         self.x0 = event.y
         self.y0 = event.x
-        print(self.x0, self.y0)
+        # print(self.x0, self.y0)
         if len(self.entry.get()) > 1:
             self.thresh = float(self.entry.get())
         self.paint_closes(self.x0, self.y0)
@@ -87,8 +93,9 @@ class Application(tk.Frame):
     def is_close(self, x1, y1):
         color_vec = np.array(self.lab_image[self.x0, self.y0, :])
         color_mat = np.array([(self.lab_image[x1, y1, 0], self.lab_image[x1, y1, 1], self.lab_image[x1, y1, 2])])
-        dist = np.asscalar(delta_e_cie2000(color_vec, color_mat)[0])
-        print(dist)
+        # dist = np.asscalar(delta_e_cie2000(color_vec, color_mat)[0])
+        dist = np.asscalar(colour.delta_E(color_vec, color_mat)[0])
+        # print(dist)
         if dist < self.thresh:
             return True
         return False
@@ -97,14 +104,14 @@ class Application(tk.Frame):
         # global image, binary_map, m_loc, size, cnt
         # x0, y0 = m_loc
         # print(x, y)
-        print(x, y, self.x0, self.y0, self.size[0], self.size[1])
+        # print(x, y, self.x0, self.y0, self.size[0], self.size[1])
         # cnt += 1
         # print(image.shape)
 
         # if binary_map[x, y] < 0:
         if x >= self.size[1] or y >= self.size[0] or x <= 0 or y <= 0:
             return 0
-        print(self.binary_map[x, y])
+        # print(self.binary_map[x, y])
         if self.binary_map[x, y] >= 0:
             return 0
         # if True:
@@ -161,7 +168,7 @@ class Application(tk.Frame):
         # map = binary_map[:, :, np.newaxis] + binary_map + binary_map
         # map = np.uint8(np.stack((binary_map, binary_map, binary_map), axis=2))
         map = np.uint8(self.binary_map)
-        print(self.lab_image.shape, map.shape, map.dtype, self.lab_image.dtype)
+        # print(self.lab_image.shape, map.shape, map.dtype, self.lab_image.dtype)
         # print(map)
         self.lab_final = cv2.bitwise_and(self.lab_image, self.lab_image, mask=map)
         self.__update_image_panels()
@@ -171,7 +178,8 @@ class Application(tk.Frame):
         empty_image = np.zeros((self.aux_side, self.aux_side, 3), np.uint8)
         empty_image[:] = np.array(self.lab_image[self.x0, self.y0, :])
 
-        self.tk_auxiliary = ImageTk.PhotoImage(Image.fromarray(cv2.cvtColor(empty_image, cv2.COLOR_LAB2RGB)))
+        # self.tk_auxiliary = ImageTk.PhotoImage(Image.fromarray(cv2.cvtColor(empty_image, cv2.COLOR_LAB2RGB)))
+        self.tk_auxiliary = ImageTk.PhotoImage(Image.fromarray(adds.LAB2RGB(empty_image)))
         if self.panel_auxiliary is None:
             self.panel_auxiliary = tk.Label(image=self.tk_auxiliary)
             self.panel_auxiliary.image = self.tk_auxiliary

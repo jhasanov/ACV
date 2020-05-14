@@ -2,14 +2,11 @@ import numpy as np
 import cv2
 import sys
 import pyautogui
-from PyQt5.QtGui import QIcon, QPixmap
-from PyQt5.QtWidgets import QApplication, QMainWindow
 import tkinter as tk
 from tkinter import filedialog
 from Cielab.rect_area import get_image_stats
 from matplotlib import pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
-
 width, height = pyautogui.size()
 scale = 0.5
 size = int(width*scale), int(height*scale)
@@ -78,10 +75,11 @@ if __name__ == '__main__':
         # print(image)
         images = list()
         a = np.multiply(image, squared_error)
-        multiplied = np.nan_to_num(np.divide(a, squared_error))
+        # multiplied = np.nan_to_num(np.divide(a, squared_error))
+        multiplied = np.array(a)
         # print(multiplied)
         images.append(multiplied)
-        get_image_stats(images, chnl_list=['Blue', 'Green', 'Red'], pdf_path=file_path[:-4]+'.pdf')
+        # get_image_stats(images, pdf_path=file_path[:-4]+'.pdf', chnl_list=['Blue', 'Green', 'Red'])
         # print(difference)
         # difference[difference == 0] = 255
         # difference = 255 - difference
