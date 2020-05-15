@@ -62,21 +62,20 @@ plt.show()
 
 #getting the input as list
 inputs=genfromtxt('cielab2000_sample_input-15000.csv',delimiter=',')
-results1=list()
+
 start1 = time.time() #pin starting point
 #model prediction
-for i in range(0,100):
-    inputX=np.array([inputs[i]])
-    prediction=model.predict(inputX)[0][0]
-    results1.append(prediction)
+prediction=model.predict_on_batch(np.array(inputs))
 end1 = time.time() #pin ending point
+print(prediction)
 print(end1-start1)
-print(results1)
+# print(end1-start1)
+# print(results1)
 
 results2=list()
 #color math delta calculation
 start2=time.time() #pin starting point
-for j in range(0,100):
+for j in range(0,len(inputs)):
     l1,a1,b1,l2,a2,b2=np.array(inputs[j])
     output=getdelta_e_cie2000(l1,a1,b1,l2,a2,b2)
     rounded_output=np.round(output,5)
@@ -86,4 +85,4 @@ norm=[float(k)/max(results2) for k in results2]
 end2=time.time() #pin ending point
  
 print(end2-start2)
-print(norm)
+# print(norm)
